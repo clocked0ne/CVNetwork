@@ -12,18 +12,120 @@
 
 					{% block bodycontent %}
 					<div class="ui inverted vertical aligned segment">
-						<div class="ui inverted middle aligned masthead segment equal width column grid stackable">
+						<div class="ui inverted middle aligned masthead basic segment equal width column grid stackable">
 							<div class="row">
 								<div class="column">
 									<div class="ui basic segment inverted center aligned">
-										<a href="/" title="Logo" class="brand-logo darken-1"><img src="{{ staticPath }}/images/logo.svg" alt="Logo" onerror="this.onerror=null; this.src='{{ staticPath }}/images/logo.png'"></a>
-										<h1 class="ui inverted header">Cool tagline</h1>
-										<h2>Awesome description of your thing</h2>
-										<a href="#" class="ui huge button">Primary CTA <i class="right sign in icon"></i></a>
+										<a href="/" title="CV.Network" class="brand-logo darken-1"><img src="{{ staticPath }}/images/logo.svg" alt="CV.Network" onerror="this.onerror=null; this.src='{{ staticPath }}/images/logo.png'"></a>
+										<h1 class="ui inverted header">Your online resume</h1>
+										<h2>Get connected with recruiters, job boards and potential employers</h2>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
+					<div class="ui very padded basic container segment">
+
+						<div class="ui stackable two column grid">
+							<div class="column">
+								<img src="/images/Stare-at-a-Random-Person.jpg" class="ui large rounded image">
+							</div>
+							<div class="column">
+								<h1 class="ui header">
+									<span class="edit" data-type="name">
+										<span class="userContent">Toby Lerone</span>
+									</span>
+									<div class="sub header">
+										<div class="ui form">
+												<div class="field">
+												<div class="ui toggle checkbox">
+													<input tabindex="0" class="hidden" type="checkbox">
+													<label>Looking for work</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</h1>
+								<div class="ui justified container editSummary" data-type="summary">
+									<span class="userContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat odio. Duis elementum erat at erat commodo eleifend. In mauris odio, cursus id nisi eu, dapibus scelerisque nunc. Aenean mi lacus, iaculis vitae nibh a, sollicitudin accumsan nunc. Pellentesque et tristique mi. Nullam vitae ante justo. Ut feugiat libero vitae tincidunt scelerisque. Pellentesque id magna tristique, semper ante vitae, molestie diam. Integer dictum, ipsum et rutrum mollis, arcu neque vulputate libero, ut condimentum risus magna ut nisl. Praesent vestibulum vehicula justo, vel volutpat felis sollicitudin a. Vestibulum non urna volutpat, ornare magna nec, cursus ante.</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui stackable two column grid">
+							<div class="column">
+								<div class="ui huge relaxed list">
+									<div class="item">
+										<div class="content edit" data-type="jobtitle">
+											<div class="header">Job Title</div>
+											<div class="description userContent">Some job title</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="ui huge relaxed list">
+									<div class="item">
+										<div class="content edit" data-type="address">
+											<div class="header">Location</div>
+											<div class="description userContent">London, United Kingdom</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="ui huge relaxed list">
+									<div class="item">
+										<div class="content edit" data-type="phone">
+											<div class="header">Phone</div>
+											<div class="description userContent">+44(0)7549334721</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="ui huge relaxed list">
+									<div class="item">
+										<div class="content edit" data-type="email">
+											<div class="header">Email</div>
+											<div class="description userContent">x@zibit.com</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h2 class="ui dividing header">
+							Work History
+						</h2>
+
+						<div class="ui large feed">
+							<div class="event">
+								<div class="content">
+									<div class="summary">
+										<span class="edit" data-type="previous_title1">
+											<span class="userContent">Previous Job title</span>
+										</span>
+										<div class="date edit" data-type="previous_date1">
+											<span class="userContent">November 2015</span>
+										</div>
+									</div>
+									<div class="extra text editSummary" data-type="previous_summary1">
+										<span class="userContent">Proin non tempus nulla. Vivamus lacinia risus nisi, varius accumsan orci elementum eget. Nullam ut est eu turpis egestas mattis. Fusce at tempus velit. Aliquam erat volutpat. Nam ullamcorper mattis odio ac eleifend. In vehicula accumsan purus et molestie. Maecenas dolor quam, laoreet et eleifend a, tincidunt a erat. Cras.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="ui right floated icon button addHistory"><i class="plus icon"></i></button>
+
+						<!--
+                                                <h2 class="ui dividing header">
+                                                    Skills
+                                                </h2>
+                        -->
+						<div class="ui basic segment center aligned">
+							<button class="ui huge primary button addCV">Save my CV <i class="right upload icon"></i></button>
+						</div>
+					</div>
 					{% endblock %}

@@ -27,6 +27,16 @@ iframe[name='google_conversion_frame']{height:0!important;width:0!important;line
 .ui.secondary.menu .toc.item{display:block;}
 .ui.left.fixed.vertical.menu{display:none;}
 
+.ui.justified.container{font-size:1.1em;line-height:1.5em;}
+.ui.feed > .event > .content .extra.text{max-width:initial;}
+.sub.header .ui.form{margin-top:1.2em;}
+.ui.toggle.checkbox label{font-size:1.3em;}
+.userContent{cursor:pointer;}
+.addHistory{position:relative;top:-2em;}
+
+textarea{width:100%;}
+h1 + .editSummary textarea{height:200px;}
+
 @media screen and (max-width:767px){
 	.ui.stackable.grid > .column:not(.row){padding:0.5rem!important;}
 	.ui.form .fields > .four.wide.field{width:50%!important;}
