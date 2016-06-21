@@ -19,6 +19,20 @@
 	{% block headcss %}
 	{{ bundle.base.styles|safe }}
 	{% endblock -%}
+
+	<!--(1) View -->
+	<script type="text/javascript">asmiSetup = {view: "d"}</script>
+	<!--(2)PageSet -->
+	<script src="//ec-ns.sascdn.com/diff/251/pages/hackday.js"></script>
+	<script type="text/javascript">/*(3)PageName*/
+	asmi.pageSet.pageName = "hackday";
+	var sas_target = "audi";
+	sas_loadHandler = function (f) {
+		if (!f.hasAd) {/* do something when no ad will be delivered, e.g. hide ad   container*/
+		} else {/* do something when ad will be delivered, e.g. make sure adcontainer is visible*/
+		}
+		console.log('format : ' + f.id + ' ' + f.hasAd);
+	}</script>
 </head>
 <body>
 {%- if view.dashboard %}
@@ -67,6 +81,7 @@
 		</div>
 	</div>
 
+
 	<footer class="ui inverted vertical footer segment">
 		<div class="ui container">
 			<div class="ui inverted equal height grid">
@@ -79,6 +94,18 @@
 {% if view.dashboard %}
 </div>
 {% endif %}
+
+
+<div id="sas_3648" style="position:absolute;top:290px;height:600px;left: 0px;z-index:9999;">
+	<script type="text/javascript">
+		asmi.pageSet.pageName = "hackday";
+		sas_formatid = "3648";
+		sas_target = "audi";
+		if(window.location.search=="?banner=1")
+			SmartAdServerAjax(false, sas_formatid, sas_target);
+	</script>
+</div>
+
 {% block bodyscripts %}
 <script>
 document.write(decodeURIComponent('%3Cscript src="')

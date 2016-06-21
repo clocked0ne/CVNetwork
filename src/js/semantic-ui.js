@@ -82,7 +82,7 @@ $(function() {
 					entries[type] = {
 						detail: type.toUpperCase(),
 						value: sanitisedInput,
-						permission: 1
+						permission: type=='phone' ? 3 : 1
 					}
 				}
 				$input.siblings('.userContent').text(sanitisedInput);

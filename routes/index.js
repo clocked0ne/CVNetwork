@@ -31,7 +31,6 @@ router.post('/savecv', function (req, res, next) {
 	}, function (error, response, body) {
 		if (error)
 			return res.status(500).send(error);
-		console.dir(body);
 		return res.status(200).send({ id: body });
 	});
 });
