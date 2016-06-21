@@ -5,6 +5,8 @@ var config = {
 	siteURL: 'localhost',
 	port: process.env.PORT || 5000,
 	requestLogging: false,
+	addAPI: 'https://cv-data.herokuapp.com/api/cvdata/add',
+	shareAPI: 'https://cv-sharing-hackaton.herokuapp.com/user/{id}/share',
 	session: {
 		secret: 'defaultSecret',
 		name: 'session'

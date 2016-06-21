@@ -13,6 +13,12 @@ var historyCount = 1,
 	entries.history4 = null;
 $(function() {
 	$('.ui.left.sidebar').sidebar('setting', 'transition', 'uncover').sidebar('attach events', '.toc.item');
+	$.get('/groups', function (data){
+		$.each(data.content, function (index, item){
+			$('select.dropdown').append('<option value="' + item.groupId + '">' + item.name + '</option>');
+		});
+		$('select.dropdown').dropdown();
+	});
 	$('.ui.checkbox').checkbox({
 		onChecked: function () {
 			entries.isLooking = 'true';
@@ -163,18 +169,16 @@ $(function() {
 			if (entries.history4)
 				submitCV.jobHistory.push(entries['history4']);
 
-		//	console.log(JSON.stringify(submitCV));
-
 			$.ajax({
-				method: "POST",
+				method: 'POST',
 				url: "/savecv",
 				contentType: 'application/json;charset=utf-8',
 				data: JSON.stringify(submitCV),
 				dataType: 'json',
 				processData: false
 			})
-			.done(function (msg) {
-				console.log( "Data Saved: " + msg );
+			.done(function (msg){
+				$.toast('Thanks, we saved your CV', 4000, 'rounded');
 				submitCV = { cvDataDetailList: [], jobHistory: [] };
 				entries.phone = null;
 				entries.address = null;
@@ -185,6 +189,35 @@ $(function() {
 				entries.history2 = null;
 				entries.history3 = null;
 				entries.history4 = null;
+				var newUserId = msg.id;
+				$('.modal.share').modal({
+					onApprove: function (){
+						var groupId = $('.groupId').dropdown('get value') || 2;
+						$.ajax({
+							method: 'POST',
+							url: "/share/" + newUserId + '?groupId=' + groupId,
+							contentType: 'application/json;charset=utf-8',
+							dataType: 'json'
+						})
+						.done(function (msg){
+							$('.very.padded.basic.container')
+								.before('<div class="ui basic container segment">' +
+									'<div class="ui icon large info message">' +
+									'<i class="share icon"></i>' +
+									'<div class="content">' +
+									'<div class="header">Here is your unique sharing link</div>' +
+									'<p>' + msg.url + '</p>' +
+									'</div>' +
+									'</div>' +
+									'</div>')
+
+						}).fail(function (jqXHR, textStatus, errorThrown){
+							console.dir(textStatus);
+							console.dir(errorThrown);
+						});
+					}
+				})
+				.modal('show');
 			}).fail(function (jqXHR, textStatus, errorThrown){
 				console.dir(textStatus);
 				console.dir(errorThrown);

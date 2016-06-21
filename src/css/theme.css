@@ -34,6 +34,8 @@ iframe[name='google_conversion_frame']{height:0!important;width:0!important;line
 .userContent{cursor:pointer;}
 .addHistory{position:relative;top:-2em;}
 
+.ui.label > .red.icon{margin:0;}
+
 textarea{width:100%;}
 h1 + .editSummary textarea{height:200px;}
 
