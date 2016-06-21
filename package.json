@@ -34,14 +34,14 @@
     "semantic-ui": "^2.1.8",
     "serve-favicon": "^2.3.0",
     "session-file-store": "^0.2.0",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
 	  "gulp": "^3.9.0",
 	  "gulp-awspublish": "^3.2.0",
 	  "gulp-bundle-assets": "^2.27.0",
 	  "gulp-header": "1.8.2",
 	  "gulp-imagemin": "^3.0.0",
 	  "del": "^2.2.0",
-	  "imagemin-pngquant": "^5.0.0",
+	  "imagemin-pngquant": "^5.0.0"
   },
 	"devDependencies": {
 		"chai": "^3.5.0",
