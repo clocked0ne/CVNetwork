@@ -5,9 +5,9 @@
   "license": "MIT",
   "author": "Nigel Horton <webdevelopment@clocked0ne.co.uk>",
   "scripts": {
-    "postinstall": "node ./copySemanticTasks && gulp",
+    "postinstall": "node ./copySemanticTasks",
     "start": "node_modules/.bin/pm2 start config/pm2.json",
-	"deploy": "node_modules/gulp/bin/gulp.js && node_modules/.bin/pm2 start config/pm2.json",
+	"deploy": "gulp && pm2 start config/pm2.json",
     "stop": "node_modules/.bin/pm2 delete config/pm2.json",
     "test": "node_modules/.bin/mocha --recursive --reporter list",
     "cdn": "gulp publish",
