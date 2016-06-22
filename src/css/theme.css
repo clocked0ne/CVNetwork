@@ -31,13 +31,13 @@ iframe[name='google_conversion_frame']{height:0!important;width:0!important;line
 .ui.feed > .event > .content .extra.text{max-width:initial;}
 .sub.header .ui.form{margin-top:1.2em;}
 .ui.toggle.checkbox label{font-size:1.3em;}
-.userContent{cursor:pointer;}
+.userContent{cursor:pointer;padding: 0.25em 0;}
 .addHistory{position:relative;top:-2em;}
 
 .ui.label > .red.icon{margin:0;}
 
 textarea{width:100%;}
-h1 + .editSummary textarea{height:200px;}
+h1 + .editSummary textarea{height:180px;}
 
 @media screen and (max-width:767px){
 	.ui.stackable.grid > .column:not(.row){padding:0.5rem!important;}
