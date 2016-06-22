@@ -1,4 +1,4 @@
-# CVNetwork
+# CV.Network
 
 > Axel Springer 2016 Hackathon team CV.Network frontend
 
@@ -37,7 +37,7 @@ LinkedIn looked like the answer, but they don’t share their data. They are als
 
 ## Credits
 
-THanks to Annabel Spiteri and Piotr Wilczyński for the APIs, Aiden Brusby for design, Harry King for concept and marketing, finally myself Nigel Horton for the frontend.
+Thanks to Annabel Spiteri and Piotr Wilczyński for the APIs, Aiden Brusby for design, Harry King for concept and marketing, finally myself Nigel Horton for the frontend.
 
 ## License
 
